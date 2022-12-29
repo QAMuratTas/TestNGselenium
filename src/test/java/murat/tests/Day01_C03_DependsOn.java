@@ -1,5 +1,6 @@
 package murat.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Day01_C03_DependsOn {
@@ -13,6 +14,7 @@ public class Day01_C03_DependsOn {
     @Test
     public void loginTest(){
         System.out.println("Login testi yapiliyor");
+        //Assert.fail();
     }
 
     @Test
