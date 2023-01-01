@@ -6,52 +6,52 @@ public class hw5 {
 
     @Test
     public void test1() {
-        System.out.println("****First test running");
+        System.out.println("\tFirst test running");
     }
 
     @Test
     public void test2() {
-        System.out.println("****Second test running");
+        System.out.println("\tSecond test running");
 
     }
 
     @BeforeSuite
     public void beforeSuite() {
-        System.out.println("*-> Before suite runing");
+        System.out.println("Before suite runing");
     }
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("*->After suite runing");
+        System.out.println("After suite runing");
     }
 
     @BeforeTest
     public void beforeTest() {
-        System.out.println("**->Before test runing");
+        System.out.println("\tBefore test runing");
     }
 
     @AfterTest
     public void afterTest() {
-        System.out.println("**->After test runing");
+        System.out.println("\tAfter test runing");
     }
 
     @BeforeClass
     public void beforeClass() {
-        System.out.println("***->Before class runing");
+        System.out.println("\t\tBefore class runing");
     }
 
     @AfterClass
     public void afterClass() {
-        System.out.println("***->After class runing");
+        System.out.println("\t\tAfter class runing");
     }
 
     @BeforeMethod
     public void beforeMethod() {
-        System.out.println("****->Before method runing");
+        System.out.println("\t\t\tBefore method runing");
     }
 
     @AfterMethod
     public void afterMethod() {
-        System.out.println("****->After method runing");
+        System.out.println("\t\t\tAfter method runing");
     }
 }
