@@ -16,5 +16,12 @@
 </classes>
 
     </test>
+    <test name="Include Exclude Groups Test 01">
+
+        <classes>
+            <class name="murat.tests.Day02_C01_TestNGXML_Groups"></class>
+        </classes>
+
+    </test>
 
 </suite>
