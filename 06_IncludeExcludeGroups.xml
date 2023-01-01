@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Include Exclude Groups Suite">
+    <groups>
+    <run>
+        <include name="smoke"/>
+        <exclude name="regression"/>
+           
+    </run>
+    </groups>
+
+    <test name="Include Exclude Groups Test">
+
+<classes>
+    <class name="murat.tests.Day02_C01_TestNGXML_Groups"></class>
+</classes>
+
+    </test>
+
+</suite>
