@@ -1,7 +1,5 @@
 package murat.tests;
 
-package clarusway.tests;
-
 import org.testng.annotations.DataProvider;
 
 public class Day03_C03_DataProviderClass {
