@@ -35,5 +35,6 @@ public class hw3 extends BaseTest {
         logout.click();
         WebElement homepageControl = driver.findElement(By.xpath("//h2"));
         softAssert.assertTrue(homepageControl.isDisplayed());
+        softAssert.assertAll();
     }
 }

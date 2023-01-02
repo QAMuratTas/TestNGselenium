@@ -26,7 +26,8 @@ public void testSoftAsser(){
     SoftAssert softAssert = new SoftAssert();
     WebElement msg =driver.findElement(By.id("error"));
     softAssert.assertTrue(msg.isDisplayed(),"mesaj görüntülenmedi");
-    softAssert.assertTrue(msg.getText().contains("Your username is invalid!"));
+    softAssert.assertTrue(msg.getText().contains("Your username is invalid!"),"Error");
+    softAssert.assertAll();
 }
 
 }
