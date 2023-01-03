@@ -30,7 +30,7 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
     @Test(
             dataProvider = "data"
     )
-    public void amazonTest(String key){
+    public void amazonTest(String key) throws InterruptedException {
 
         // Go to https://www.amazon.com/
         driver.get("https://www.amazon.com/");
@@ -40,7 +40,7 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
         searchBox.sendKeys(key + Keys.ENTER);
 
         // Assert that first item contains searched keyword in the item description
-        WebElement firstProduct = driver.findElement(By.xpath("//div[@data-component-type='s-search-result']"));
+        WebElement firstProduct = driver.findElement(By.xpath("(//div[@data-component-type='s-search-result'])[1]"));
         String firstProductDescription = firstProduct.getText().toLowerCase();
         Assert.assertTrue(firstProductDescription.contains(key));
 
@@ -50,10 +50,10 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
         // Add first item to cart
         WebElement addToCartBtn = driver.findElement(By.id("add-to-cart-button"));
         addToCartBtn.click();
+Thread.sleep(5000);
+        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("attach-sidesheet-checkout-button"))));
+        //wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("attach-sidesheet-checkout-button"))));
 
         // Click Go to cart on cart section
         WebElement goToCartLink = driver.findElement(By.id("attach-view-cart-button-form"));
@@ -80,10 +80,7 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
 
         // Assert that login page is opened
         Assert.assertTrue(driver.getCurrentUrl().startsWith("https://www.amazon.com/ap/signin"));
-
     }
-
-
     @DataProvider
     public Object[][] data(){
         return new Object[][]{
@@ -92,6 +89,4 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
                 {"keyboard"}
         };
     }
-
-
 }
