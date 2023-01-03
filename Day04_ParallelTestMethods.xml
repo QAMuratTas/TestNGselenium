@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel Test Suite" parallel="methods">
-    <test name="Parallel Test 01">
+    <test name="Parallel Test 01" parallel="classes">
         <classes>
             <class name="murat.tests.Day01_C09_AssertionTypes"/>
             <class name="murat.tests.Day01_C03_DependsOn"/>
@@ -10,7 +10,7 @@
         </classes>
     </test>
 
-    <test name="Parallel Test 02">
+    <test name="Parallel Test 02" parallel="methods">
         <classes>
             <class name="murat.tests.Day01_C09_AssertionTypes"/>
             <class name="murat.tests.Day01_C03_DependsOn"/>
