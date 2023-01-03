@@ -3,7 +3,7 @@
 <suite name="Parallel Test Suite" parallel="methods">
     <test name="Parallel Test 01">
         <classes>
-            <class name="murat.tests.Day01_C02_Priority"/>
+            <class name="murat.tests.Day01_C09_AssertionTypes"/>
             <class name="murat.tests.Day01_C03_DependsOn"/>
             <class name="murat.tests.Day01_C05_TimeOut"/>
 
@@ -12,14 +12,14 @@
 
     <test name="Parallel Test 02">
         <classes>
-            <class name="murat.tests.Day01_C02_Priority"/>
+            <class name="murat.tests.Day01_C09_AssertionTypes"/>
             <class name="murat.tests.Day01_C03_DependsOn"/>
             <class name="murat.tests.Day01_C05_TimeOut"/>
         </classes>
     </test>
     <test name="Parallel Test 03">
         <classes>
-            <class name="murat.tests.Day01_C02_Priority"/>
+            <class name="murat.tests.Day01_C09_AssertionTypes"/>
             <class name="murat.tests.Day01_C03_DependsOn"/>
             <class name="murat.tests.Day01_C05_TimeOut"/>
         </classes>
