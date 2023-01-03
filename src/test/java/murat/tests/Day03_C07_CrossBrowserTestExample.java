@@ -50,10 +50,10 @@ public class Day03_C07_CrossBrowserTestExample extends BaseCrossBrowserTest {
         // Add first item to cart
         WebElement addToCartBtn = driver.findElement(By.id("add-to-cart-button"));
         addToCartBtn.click();
-Thread.sleep(5000);
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//Thread.sleep(5000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        //wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("attach-sidesheet-checkout-button"))));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("attach-sidesheet-checkout-button"))));
 
         // Click Go to cart on cart section
         WebElement goToCartLink = driver.findElement(By.id("attach-view-cart-button-form"));
