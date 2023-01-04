@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.ITest;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -36,7 +35,7 @@ public class BaseTestReport {
         // Report PATH= creates the html report right under test-output
         //rapor oluştuktan sonra raporunuz nereye eklensin istiyorsanız buraya yazıyorsunuz.
         String currentDate = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new Date());
-        String filePath = System.getProperty("user.dir") + "/test-output/report/" + currentDate + "test_report.html";
+        String filePath = System.getProperty("user.dir") + "\\test-output\\report\\" + currentDate + "test_report.html";
 
         //Attach html and extent reports
         //oluşturmak istediğimiz raporu (html formatında) başlatıyoruz, filePath ile dosya yolunu belirliyoruz.
@@ -83,13 +82,15 @@ public class BaseTestReport {
 
     @AfterMethod
     public void teardown(ITestResult result) throws IOException {
-        if (result.getStatus() == ITestResult.FAILURE){
-            String screenShotLocation = ReusableMethods.getScreenShot(driver,result.getName());
+
+        if(result.getStatus() == ITestResult.FAILURE){
+            String screenShotLocation = ReusableMethods.getScreenshot(driver, result.getName());
             extentTest.fail(result.getName());
             extentTest.addScreenCaptureFromPath(screenShotLocation);
             extentTest.fail(result.getThrowable());
-        } else if (result.getStatus()== ITestResult.SKIP){// eğer test çalıştırlmadan geçilmezse
-            extentTest.skip("Test case is skipped:"+result.getName());//ignore olanlar
+        }
+        else if (result.getStatus() == ITestResult.SKIP) { // eğer test çalıştırılmadan geçilmezse
+            extentTest.skip("Test Case is skipped: " + result.getName()); // Ignore olanlar
         }
 
         driver.quit();

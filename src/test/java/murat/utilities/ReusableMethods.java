@@ -12,23 +12,31 @@ import java.util.Date;
 
 public class ReusableMethods {
 
-    public static String getScreenShot (WebDriver driver, String name) throws IOException {
-    // Screenshot dosya ismi için şu anki tarihi string olarak alıyoruz
+
+    public static String getScreenshot(WebDriver driver, String name) throws IOException {
+
+        // Screenshot dosya ismi icin suanki tarihi string olarak aliyoruz
         String date = formatCurrentDate("yyyyMMddhhmmss");
 
+        // Screenshot alip file objesine atiyoruz
         File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-// kaydedilecek dosyanın yolunu belirliyoruz
-        String target = System.getProperty("user.dir")+"test-output\\Screenshot\\"+name+date+".png";
 
-        File targetFile =new File(target);
-        // kaynağı hedefe kopyalıyoruz
-        FileUtils.copyFile(source,targetFile);
-        return target;
+        // Kaydedilecek dosyanin yolunu belirliyoruz
+        String target = System.getProperty("user.dir") + "\\test-output\\Screenshots\\" + name + date + ".png";
 
+        File targetFile = new File(target);
+
+        FileUtils.copyFile(source, targetFile);
+
+        return  target;
 
     }
 
-    public static String formatCurrentDate (String pattern){
+
+
+    public static String formatCurrentDate(String pattern){
+
         return new SimpleDateFormat(pattern).format(new Date());
+
     }
 }
