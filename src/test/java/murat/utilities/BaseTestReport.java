@@ -8,8 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.ITest;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
@@ -79,7 +82,15 @@ public class BaseTestReport {
     }
 
     @AfterMethod
-    public void teardown(){
+    public void teardown(ITestResult result) throws IOException {
+        if (result.getStatus() == ITestResult.FAILURE){
+            String screenShotLocation = ReusableMethods.getScreenShot(driver,result.getName());
+            extentTest.fail(result.getName());
+            extentTest.addScreenCaptureFromPath(screenShotLocation);
+            extentTest.fail(result.getThrowable());
+        } else if (result.getStatus()== ITestResult.SKIP){// eğer test çalıştırlmadan geçilmezse
+            extentTest.skip("Test case is skipped:"+result.getName());//ignore olanlar
+        }
 
         driver.quit();
     }

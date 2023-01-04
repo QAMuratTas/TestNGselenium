@@ -21,6 +21,7 @@ public class ReusableMethods {
         String target = System.getProperty("user.dir")+"test-output\\Screenshot\\"+name+date+".png";
 
         File targetFile =new File(target);
+        // kaynağı hedefe kopyalıyoruz
         FileUtils.copyFile(source,targetFile);
         return target;
 
