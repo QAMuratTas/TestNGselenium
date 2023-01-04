@@ -3,6 +3,7 @@
 <suite name="Listener Test Suite">
 
     <listeners>
+
         <listener class-name="org.testng.reporters.EmailableReporter"></listener>
         <listener class-name="org.testng.reporters.FailedReporter"></listener>
     </listeners>

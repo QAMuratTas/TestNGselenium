@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}#summary {margin-top:30px}h1 {font-size:30px}body {width:100%;}th,td {padding: 8px}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold;color:#0D1EB6;}.easy-overview {margin-left: auto; margin-right: auto;} .easy-test-overview tr:first-child {background-color:#D3D3D3}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<center><h1>TestNG Customized Report - Wed Jan 04 22:59:24 EET 2023</h1></center>
+<div class="easy-test-overview">
+<table class="table-bordered easy-overview">
+<tr><th>Test</th><th># No</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Included Groups</th><th>Excluded Groups</th><th># Browser</th><th># Start Time</th><th># End Time</th><th># Total<br/>Time(hh:mm:ss)</th></tr>
+<tr><th colspan="11">Listener Test Suite</th></tr>
+<tr><td><a href="#t0">Listener Tests</a></td><td class="num">3</td><td class="num">1</td><td class="num">0</td><td class="num attn">2</td><td></td><td></td><td class="num">chrome</td><td class="num">10:59:23 ÖS</td><td class="num">10:59:24 ÖS</td><td class="num">00:00:00</td></tr>
+</table>
+</div>
+<div class="easy-test-summary"><table class="table-bordered" id='summary'><thead><tr><th>Class</th><th>Method</th><th>Short Exception</th><th>Screenshot</th><th>Start Time</th><th>End Time</th></tr></thead><tbody><tr><th colspan="6">Listener Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="6">Listener Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">murat.tests.Day05_C03_UseListener</td><td><a href="#m0">failedTest</a></td><td rowspan="">java.lang.AssertionError: null</td><td rowspan=""></td><td rowspan="">10:59:24 ÖS</td><td rowspan="">10:59:24 ÖS</td></tr><tr class="failedeven"><td><a href="#m1">timedOutTest</a></td><td rowspan="">org.testng.internal.thread.ThreadTimeoutException: Method murat.tests.Day05_C03_UseListener.timedOutTest() didn&apos;t finish within the time-out 500</td><td rowspan=""></td><td rowspan="">10:59:24 ÖS</td><td rowspan="">10:59:24 ÖS</td></tr><tr><th colspan="6">Listener Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">murat.tests.Day05_C03_UseListener</td><td><a href="#m2">passedTest</a></td><td rowspan=""></td><td rowspan=""></td><td rowspan="">10:59:24 ÖS</td><td rowspan="">10:59:24 ÖS</td></tr></tbody>
+</table>
+</div>
+<h2>Listener Tests</h2><h3 id="m0">murat.tests.Day05_C03_UseListener#failedTest</h3><table class="table-bordered result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
+	at murat.tests.Day05_C03_UseListener.failedTest(Day05_C03_UseListener.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">murat.tests.Day05_C03_UseListener#timedOutTest</h3><table class="table-bordered result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.thread.ThreadTimeoutException: Method murat.tests.Day05_C03_UseListener.timedOutTest() didn&apos;t finish within the time-out 500
+	at java.base@11.0.16/java.lang.Thread.sleep(Native Method)
+	at app//murat.tests.Day05_C03_UseListener.timedOutTest(Day05_C03_UseListener.java:27)
+	at java.base@11.0.16/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base@11.0.16/java.lang.Thread.run(Thread.java:834)
+... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">murat.tests.Day05_C03_UseListener#passedTest</h3><table class="table-bordered result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
