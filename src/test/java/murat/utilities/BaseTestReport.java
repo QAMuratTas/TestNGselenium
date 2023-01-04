@@ -80,6 +80,7 @@ public class BaseTestReport {
 
     @AfterMethod
     public void teardown(){
+
         driver.quit();
     }
 
