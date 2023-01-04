@@ -13,7 +13,10 @@ public class ReusableMethods {
     public static String getScreenShot (WebDriver driver, String name){
     // Screenshot dosya ismi için şu anki tarihi string olarak alıyoruz
         String date = formatCurrentDate("yyyyMMddhhmmss");
+
         File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+// kaydedilecek dosyanın yolunu belirliyoruz
+        String target = System.getProperty("user.dir")+"test-output\\Screenshot\\"+name+date+".png";
 
 
 
