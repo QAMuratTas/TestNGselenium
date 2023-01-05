@@ -20,7 +20,7 @@ public class Day06_C01_ExcelUtil  extends BaseCrossBrowserTest {
         String path = "C:\\Users\\MURAT\\IdeaProjects\\TestNGSelenium\\src\\test\\java\\murat\\resources\\testdata.xlsx";
         ExcelUtils eu =new ExcelUtils(path,2);
         driver.get("http://crossbrowsertesting.github.io/login-form.html");
-        String email =eu.getCellData(1,0);
+        String email =eu.getCellData(1,0);// satır ve sütunlar 0 dan başlar.
         String password =eu.getCellData(1,1);
         driver.findElement(By.id("username")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys(password);
