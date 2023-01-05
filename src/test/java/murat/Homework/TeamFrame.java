@@ -1,7 +1,8 @@
-package Homework;
+package murat.Homework;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import murat.utilities.BaseTest;
+import murat.utilities.BaseTestReport;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
@@ -9,11 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class TeamFrame extends BaseTest {
+public class TeamFrame extends BaseTestReport {
 
     @Test
     public void frame() throws InterruptedException {
         driver.get("https://demoqa.com/");
+        extentTest = extentReports.createTest("Demoqa Test 01");
         Thread.sleep(3000);
         WebElement adFrame =driver.findElement(By.cssSelector("iframe[title='3rd party ad content']"));
         driver.switchTo().frame(adFrame);
@@ -41,11 +43,7 @@ public class TeamFrame extends BaseTest {
         driver.switchTo().parentFrame();
         WebElement frame3 =driver.findElement(By.id("frame2"));
         driver.switchTo().frame(frame3);
-
         WebElement text3 =driver.findElement(By.id("sampleHeading"));
         System.out.println(text3.getText());
-
     }
-
-
 }

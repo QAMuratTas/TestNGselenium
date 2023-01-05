@@ -1,4 +1,4 @@
-package Homework;
+package murat.Homework;
 
 import org.testng.annotations.*;
 
