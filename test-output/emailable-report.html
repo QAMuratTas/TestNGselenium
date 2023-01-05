@@ -25,14 +25,38 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Listener Tests</a></td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">9.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Listener Tests</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">16.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">Listener Tests &#8212; passed</th></tr>
-<tr class="passedodd"><td>murat.Homework.TeamFrame</td><td><a href="#m1"><b>frame</b>  </a></td><td class="numi">1</td><td>1672926249515</td><td class="numi">6679</td></tr>
+<tr id="t1"><th colspan="5">Listener Tests &#8212; failed</th></tr>
+<tr class="failedodd"><td>murat.Homework.TeamFrame</td><td><a href="#m1"><b>frame</b>  </a></td><td class="numi">1</td><td>1672926682388</td><td class="numi">8787</td></tr>
 </table>
 <h1>Listener Tests</h1>
 <h2 id="m1">murat.Homework.TeamFrame:frame</h2>
+<div>
+<div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;h5&gt; is not clickable at point (745,676) because another element &lt;iframe id=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot; name=&quot;google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0&quot;&gt; obscures it
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;LAPTOP-C3KP959D&apos;, ip: &apos;192.168.2.5&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a45c3fe7-0b8d-4df3-a3f9-7f2a6f0f3451, clickElement {id=189da633-1ba1-436d-bd9f-542912c7eaea}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 108.0.1, moz:accessibilityChecks: false, moz:buildID: 20221215175817, moz:debuggerAddress: 127.0.0.1:61714, moz:geckodriverVersion: 0.32.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 32156, moz:profile: C:\Users\MURAT\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:61714/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on WINDOWS (a45c3fe7-0b8d-4df3-a3f9-7f2a6f0f3451)] -&gt; xpath: (//h5)[3]]
+Session ID: a45c3fe7-0b8d-4df3-a3f9-7f2a6f0f3451
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at murat.Homework.TeamFrame.frame(TeamFrame.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 28 stack frames</div>
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

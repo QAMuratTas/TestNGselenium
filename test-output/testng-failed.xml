@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Failed suite [Failed suite [Listener Test Suite]]]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [Listener Test Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="org.testng.reporters.EmailableReporter"/>
     <listener class-name="org.testng.reporters.FailedReporter"/>
   </listeners>
-  <test thread-count="5" name="Listener Tests(failed)(failed)(failed)">
+  <test thread-count="5" name="Listener Tests(failed)">
     <classes>
-      <class name="murat.tests.Day05_C03_UseListener">
+      <class name="murat.Homework.TeamFrame">
+        <parameter name="browser" value="firefox"/>
         <methods>
-          <include name="failedTest"/>
-          <include name="timedOutTest"/>
+          <include name="beforeSuite"/>
+          <include name="setup"/>
+          <include name="frame"/>
+          <include name="afterSuite"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- murat.tests.Day05_C03_UseListener -->
+      </class> <!-- murat.Homework.TeamFrame -->
     </classes>
-  </test> <!-- Listener Tests(failed)(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [Failed suite [Listener Test Suite]]] -->
+  </test> <!-- Listener Tests(failed) -->
+</suite> <!-- Failed suite [Listener Test Suite] -->
