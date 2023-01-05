@@ -1,7 +1,7 @@
 package murat.Homework;
 
 
-import murat.utilities.BaseTest;
+
 import murat.utilities.BaseTestReport;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -18,16 +18,18 @@ public class TeamFrame extends BaseTestReport {
         extentTest = extentReports.createTest("Demoqa Test 01");
         Thread.sleep(3000);
         WebElement adFrame =driver.findElement(By.cssSelector("iframe[title='3rd party ad content']"));
+        //driver.switchTo().frame(1);
         driver.switchTo().frame(adFrame);
 
         WebElement adQuit= driver.findElement(By.id("cbb"));
         adQuit.click();
         Actions actions = new Actions(driver);
-
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         driver.switchTo().parentFrame();
-        WebElement frame = driver.findElement(By.xpath("(//h5)[3]"));
+
+        WebElement frame = driver.findElement(By.xpath("(//h5)[3]"));// //h5[starts-with(text(),'Alerts')] , //h5[contains(text(),'Alerts')],//h5[(text()='Alerts, Frame & Windows')]
         frame.click();
+        // (//*[.='Alerts, Frame & Windows'])[4]
 
         WebElement frameButton =driver.findElement(By.xpath("(//li[@id='item-2'])[2]"));
         frameButton.click();
